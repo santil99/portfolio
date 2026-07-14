@@ -2,10 +2,10 @@ import { Mail, Briefcase, ArrowUpRight } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '@/components/brand-icons'
 
 const contactLinks = [
-  { label: 'Email', href: 'mailto:hello@santiagolorenzo.dev', icon: Mail },
-  { label: 'Upwork', href: 'https://upwork.com', icon: Briefcase },
-  { label: 'GitHub', href: 'https://github.com', icon: GithubIcon },
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: LinkedinIcon },
+  { label: 'Email', href: 'mailto:santiilorenzo9499@gmail.com', icon: Mail },
+  { label: 'Upwork', href: 'https://www.upwork.com/freelancers/~017087c661dbf3f1f4?mp_source=share', icon: Briefcase },
+  { label: 'GitHub', href: 'https://github.com/santil99', icon: GithubIcon },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/santiagolorenzo99/', icon: LinkedinIcon },
 ]
 
 export function ContactFooter() {

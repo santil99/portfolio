@@ -12,7 +12,7 @@ const services = [
     icon: Server,
     title: 'Robust Backend & APIs',
     description:
-      'Designing scalable REST APIs, microservices, and asynchronous systems (ActiveMQ, Spring Boot).',
+      'Designing scalable REST APIs, microservices, and asynchronous systems.',
   },
   {
     icon: Database,

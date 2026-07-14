@@ -5,7 +5,7 @@ const experience = [
     role: 'Full Stack Web Developer',
     company: 'Getronics',
     location: 'Spain',
-    period: '2023 — Present',
+    period: '2023 — 2026',
     highlights: [
       'Built and maintained REST APIs powering critical enterprise workflows.',
       'Led legacy modernization efforts, refactoring monoliths into modular architectures.',
@@ -34,14 +34,20 @@ export function Timeline() {
         description="Where I've been building and the impact I've made along the way."
       />
 
-      <div className="mt-12 space-y-px overflow-hidden rounded-2xl border border-border bg-border">
+      <div className="mt-6">
+        <p className="text-sm font-medium text-foreground">
+          Over +5 years of hands-on experience working across backend systems, modern web apps, legacy maintenance, and safe product evolution.
+        </p>
+      </div>
+
+      <div className="mt-8 space-y-px overflow-hidden rounded-2xl border border-border bg-border">
         {experience.map((item) => (
           <div
             key={item.company}
             className="grid gap-4 bg-card p-6 md:grid-cols-[1fr_2fr] md:p-8"
           >
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-accent">
+              <p className="font-mono text-xs uppercase tracking-widest text-zinc-300">
                 {item.period}
               </p>
               <h3 className="mt-3 text-base font-medium text-foreground">

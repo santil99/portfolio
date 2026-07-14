@@ -4,20 +4,6 @@ import { SectionHeading } from '@/components/section-heading'
 
 const projects = [
   {
-    title: 'Enterprise Administration Portal',
-    description:
-      'Migrated a legacy system to a modern, responsive interface, streamlining internal operations and cutting page-load times dramatically.',
-    tech: ['Java', 'Spring Boot', 'Vue3', 'PostgreSQL'],
-    links: { demo: '#', source: '#' },
-  },
-  {
-    title: 'Asynchronous Integration Engine',
-    description:
-      'Designed a high-throughput backend service integrating external APIs with message queues for reliable, decoupled processing.',
-    tech: ['Spring Boot', 'ActiveMQ', 'REST APIs', 'Docker'],
-    links: { demo: '#', source: '#' },
-  },
-  {
     title: 'This Portfolio',
     description:
       'Highly optimized, open-source portfolio designed with clean structure, accessible markup, and fast loading times.',
