@@ -41,7 +41,7 @@ export function SiteNav() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a
           href="#top"
-          className="text-sm font-semibold tracking-tight text-foreground"
+          className="text-base font-semibold tracking-tight text-foreground transition-opacity hover:opacity-90"
         >
           Santiago Lorenzo
         </a>

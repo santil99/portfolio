@@ -20,9 +20,14 @@ export function Hero() {
             Available for new projects
           </div>
 
-          <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Full Stack Software Engineer
-          </h1>
+          <div className="mt-6 space-y-3">
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-muted-foreground/80">
+              Santiago Lorenzo
+            </p>
+            <h1 className="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              Full Stack Software Engineer
+            </h1>
+          </div>
 
           <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
             I build robust backend systems, clean modern web applications, and help companies maintain, debug, and safely evolve their existing production systems.

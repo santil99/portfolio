@@ -8,7 +8,7 @@ import { ContactFooter } from '@/components/contact-footer'
 
 export default function Page() {
   return (
-    <div className="min-h-dvh scroll-smooth bg-background">
+    <div className="page-shell min-h-dvh scroll-smooth bg-background">
       <SiteNav />
       <main>
         <Hero />

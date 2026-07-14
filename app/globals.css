@@ -121,7 +121,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     color-scheme: dark;
-    --background: oklch(0.145 0 0);
+    --background: oklch(14.424% 0.01738 284.007 / 0.774);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
@@ -159,7 +159,98 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    background-color: var(--background);
+  }
+
   body {
     @apply bg-background text-foreground;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background:
+      radial-gradient(70rem 70rem at 10% 0%, color-mix(in srgb, var(--accent) 18%, transparent) 0%, transparent 55%),
+      radial-gradient(45rem 45rem at 90% 8%, color-mix(in srgb, oklch(0.62 0.16 250) 16%, transparent) 0%, transparent 42%),
+      linear-gradient(135deg, oklch(0.08 0 0) 0%, oklch(0.12 0.004 280) 55%, oklch(0.09 0 0) 100%);
+  }
+
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    inset: -20%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.9;
+    filter: blur(70px);
+    animation: drift 22s ease-in-out infinite alternate;
+  }
+
+  body::before {
+    background:
+      radial-gradient(circle at 20% 20%, color-mix(in srgb, #8b5cf6 20%, transparent) 0%, transparent 30%),
+      radial-gradient(circle at 80% 15%, color-mix(in srgb, #3b82f6 16%, transparent) 0%, transparent 35%);
+  }
+
+  body::after {
+    animation-duration: 26s;
+    animation-direction: alternate-reverse;
+    background:
+      radial-gradient(circle at 75% 80%, color-mix(in srgb, #22d3ee 14%, transparent) 0%, transparent 25%),
+      radial-gradient(circle at 25% 70%, color-mix(in srgb, #f59e0b 10%, transparent) 0%, transparent 20%);
+  }
+}
+
+@layer utilities {
+  .page-shell {
+    position: relative;
+    isolation: isolate;
+    overflow-x: hidden;
+  }
+
+  .page-shell::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.8) 0 1px, transparent 2px),
+      radial-gradient(circle at 80% 18%, rgba(255,255,255,0.65) 0 1px, transparent 2px),
+      radial-gradient(circle at 60% 75%, rgba(255,255,255,0.55) 0 1px, transparent 2px),
+      radial-gradient(circle at 30% 65%, rgba(255,255,255,0.5) 0 1px, transparent 2px);
+    background-size: 220px 220px, 260px 260px, 300px 300px, 240px 240px;
+    opacity: 0.35;
+    animation: twinkle 12s ease-in-out infinite;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(4%, 3%, 0) scale(1.07);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.24;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .page-shell::before {
+    animation: none !important;
   }
 }
