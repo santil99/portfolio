@@ -8,7 +8,7 @@ const projects = [
     description:
       'Highly optimized, open-source portfolio designed with clean structure, accessible markup, and fast loading times.',
     tech: ['HTML5', 'Tailwind CSS', 'JavaScript'],
-    links: { demo: '#', source: '#' },
+    links: { demo: '#', source: 'https://github.com/santil99/portfolio' },
   },
 ]
 
